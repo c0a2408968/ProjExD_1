@@ -26,6 +26,7 @@ def main():
         if x >= 3200: #練習9
             tmr = 0
         screen.blit(kk_img, [300, 200]) #練習4
+        key_lst = pg.key.get_pressed() #練習10_3
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習6
