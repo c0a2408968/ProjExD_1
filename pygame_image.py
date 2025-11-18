@@ -20,7 +20,8 @@ def main():
         x = tmr #練習５
         screen.blit(bg_img, [-x, 0]) #背景画像が流れるためには右から左へ
         screen.blit(bg_img2, [-x+1600, 0]) #練習7
-        if x >= 1600: #練習9
+        screen.blit(bg_img, [-x+3200, 0]) #練習9
+        if x >= 3200: #練習9
             tmr = 0
         screen.blit(kk_img, [300, 200]) #練習4
         pg.display.update()
