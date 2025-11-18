@@ -33,14 +33,13 @@ def main():
         
         y = 0
         z=0
-        kk_rct.move_ip(-1,0) #応用１
         if key_lst[pg.K_RIGHT]:
             y=3
         if key_lst[pg.K_UP]:#応用1_2
             z=-1
         if key_lst[pg.K_DOWN]:
             z=1
-        kk_rct.move_ip(y,z) #応用2
+        kk_rct.move_ip(-1+y,z) #応用2の修正
         screen.blit(kk_img, kk_rct) #練習10_5
         pg.display.update()
         tmr += 1        
