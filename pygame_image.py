@@ -34,6 +34,10 @@ def main():
         kk_rct.move_ip(-1,0) #応用１
         if key_lst[pg.K_RIGHT]:
             kk_rct.move_ip(3, 0)
+        if key_lst[pg.K_UP]:#応用1_2
+            kk_rct.move_ip(0, -1)
+        if key_lst[pg.K_DOWN]:
+            kk_rct.move_ip(0, 1)
         screen.blit(kk_img, kk_rct) #練習10_5
         pg.display.update()
         tmr += 1        
