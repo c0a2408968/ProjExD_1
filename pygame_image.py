@@ -27,6 +27,14 @@ def main():
             tmr = 0
         screen.blit(kk_img, [300, 200]) #練習4
         key_lst = pg.key.get_pressed() #練習10_3
+        if key_lst[pg.K_UP]: #練習10_4
+            kk_rct.move_ip(0, -1)
+        if key_lst[pg.K_DOWN]:
+            kk_rct.move_ip(0, 1)
+        if key_lst[pg.K_LEFT]:
+            kk_rct.move_ip(-1, 0)
+        if key_lst[pg.K_RIGHT]:
+            kk_rct.move_ip(1, 0)
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習6
