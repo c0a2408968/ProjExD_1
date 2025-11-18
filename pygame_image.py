@@ -20,12 +20,13 @@ def main():
             if event.type == pg.QUIT: return
 
         x = tmr #練習５
+        #x = tmr % 3200 練習9の先生の場合（if文は使用していない）
         screen.blit(bg_img, [-x, 0]) #背景画像が流れるためには右から左へ
         screen.blit(bg_img2, [-x+1600, 0]) #練習7
         screen.blit(bg_img, [-x+3200, 0]) #練習9
         if x >= 3200: #練習9
             tmr = 0
-        screen.blit(kk_img, [300, 200]) #練習4
+
         key_lst = pg.key.get_pressed() #練習10_3
         if key_lst[pg.K_UP]: #練習10_4
             kk_rct.move_ip(0, -1)
@@ -35,6 +36,7 @@ def main():
             kk_rct.move_ip(-1, 0)
         if key_lst[pg.K_RIGHT]:
             kk_rct.move_ip(1, 0)
+        screen.blit(kk_img, kk_rct) #練習10_5
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習6
