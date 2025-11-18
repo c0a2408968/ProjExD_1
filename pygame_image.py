@@ -12,6 +12,7 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
     bg_img2 = pg.transform.flip(bg_img, True, False)#練習8
     kk_img = pg.transform.flip(pg.image.load("fig/3.png"), True, False)#練習3
+    kk_rct = kk_img.get_rect()#練習10_1
     tmr = 0
     while True:
         for event in pg.event.get():
